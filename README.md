@@ -1,5 +1,5 @@
 # captcha
-验证码生成器-支持数字汉字及加减乘除法,同时支持JPG静态图及GIF动态图
+验证码生成器-支持数字汉字及多元运算或简单二元运算,同时支持JPG静态图及GIF动态图
 
 ## 使用方法
 ### 1.pom中引入jar包
@@ -13,7 +13,7 @@
 ### 2.java示例
 ``` java
  CaptchaClient simpleCaptchaClient = CaptchaClient.create().
-                captchaStrategy(SimpleCaptchaStrategy.getInstance())
+                captchaStrategy(new SimpleCaptchaStrategy())
                 .transform(true)
                 .imageType(ImageTypeEnum.GIF)
                 .number(3)
