@@ -50,7 +50,7 @@ public abstract class AbstractCaptchaService implements ICaptchaService {
     }
 
     @Override
-    public CaptchaBean generateCaptcha() {
+    public CaptchaBean generateCaptcha() throws Exception {
         // 1.build image
         BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
         Graphics graphics = image.getGraphics();
@@ -108,7 +108,7 @@ public abstract class AbstractCaptchaService implements ICaptchaService {
 
     public abstract void drawOther(BufferedImage image);
 
-    public CaptchaBean drawCode(Graphics graphics) {
+    public CaptchaBean drawCode(Graphics graphics) throws Exception {
         //1.获取随机验证码
         CaptchaBean captcha = captchaStrategy.generateCode();
         //2.设置字体

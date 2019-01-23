@@ -15,7 +15,7 @@ public interface ICaptchaStrategy {
      *
      * @return
      */
-    CaptchaBean generateCode();
+    CaptchaBean generateCode() throws Exception;
 
     /**
      * 获取支持字体

@@ -9,17 +9,8 @@ import java.util.Random;
  */
 public class SimpleCaptchaStrategy implements ICaptchaStrategy {
     private static final Random random = new Random();
-    private static final SimpleCaptchaStrategy INSTANCE = new SimpleCaptchaStrategy();
     private static char[] ch = "ABCDEFGHIJKMNPQRSTUVWXYZ23456789".toCharArray();
     private int number = 4;
-
-    private SimpleCaptchaStrategy() {
-    }
-
-    public static SimpleCaptchaStrategy getInstance() {
-        return INSTANCE;
-    }
-
 
     @Override
     public CaptchaBean generateCode() {

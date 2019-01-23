@@ -10,8 +10,6 @@ import java.util.Random;
  */
 public class ChineseCaptchaStrategy implements ICaptchaStrategy {
 
-    private static final ChineseCaptchaStrategy INSTANCE = new ChineseCaptchaStrategy();
-
     /**
      * 常用汉字集
      */
@@ -51,14 +49,6 @@ public class ChineseCaptchaStrategy implements ICaptchaStrategy {
             "\u4f55\u725b\u53d6\u5165\u5cb8\u6562\u6389\u5ffd\u79cd\u88c5\u9876\u6025\u6797\u505c" +
             "\u606f\u53e5\u533a\u8863\u822c\u62a5\u53f6\u538b\u6162\u53d4\u80cc\u7ec6";
     private int number = 4;
-
-    private ChineseCaptchaStrategy() {
-    }
-
-    public static ChineseCaptchaStrategy getInstance() {
-        return INSTANCE;
-    }
-
 
     @Override
     public CaptchaBean generateCode() {

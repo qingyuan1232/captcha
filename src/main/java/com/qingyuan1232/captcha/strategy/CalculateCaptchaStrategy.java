@@ -13,15 +13,7 @@ import java.awt.*;
  */
 @Slf4j
 public class CalculateCaptchaStrategy implements ICaptchaStrategy {
-    private static final CalculateCaptchaStrategy INSTANCE = new CalculateCaptchaStrategy();
     private int number = 2;
-
-    private CalculateCaptchaStrategy() {
-    }
-
-    public static ICaptchaStrategy getInstance() {
-        return INSTANCE;
-    }
 
     @Override
     public CaptchaBean generateCode() {

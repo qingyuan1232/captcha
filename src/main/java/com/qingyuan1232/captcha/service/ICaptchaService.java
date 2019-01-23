@@ -4,7 +4,7 @@ import com.qingyuan1232.captcha.bean.CaptchaBean;
 
 public interface ICaptchaService {
 
-    CaptchaBean generateCaptcha();
+    CaptchaBean generateCaptcha() throws Exception;
 
     ImageTypeEnum getImageType();
 

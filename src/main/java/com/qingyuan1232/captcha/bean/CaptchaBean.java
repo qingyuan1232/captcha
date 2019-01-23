@@ -36,7 +36,6 @@ public class CaptchaBean {
         this.codeArray = codeArray;
     }
 
-
     public ImageTypeEnum getImageType() {
         return imageType;
     }

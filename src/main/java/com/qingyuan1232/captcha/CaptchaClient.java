@@ -52,7 +52,7 @@ public class CaptchaClient {
      *
      * @return
      */
-    public CaptchaBean generate() {
+    public CaptchaBean generate() throws Exception {
         return captchaService.generateCaptcha();
     }
 
@@ -67,7 +67,7 @@ public class CaptchaClient {
          *
          * @see ICaptchaStrategy
          */
-        ICaptchaStrategy captchaStrategy = SimpleCaptchaStrategy.getInstance();
+        ICaptchaStrategy captchaStrategy = new SimpleCaptchaStrategy();
 
         /**
          * 验证码个数

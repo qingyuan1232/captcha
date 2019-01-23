@@ -38,7 +38,7 @@ public class GifCaptchaService extends AbstractCaptchaService {
     }
 
     @Override
-    public CaptchaBean generateCaptcha() {
+    public CaptchaBean generateCaptcha() throws Exception {
         //获取随机验证码
         CaptchaBean captcha = captchaStrategy.generateCode();
         drawCode(captcha);
@@ -123,7 +123,7 @@ public class GifCaptchaService extends AbstractCaptchaService {
         float y = ((float) (height >> 1)) + (font.getSize() >> 1);
         float m = ((float) (width - (word.length * font.getSize()))) / word.length;
         //字符的x坐标
-        float x = m / 2;
+        float x = m / 5;
 
         for (int i = 0; i < word.length; i++) {
             ac = AlphaComposite.getInstance(AlphaComposite.SRC_OVER, getTransparency(flag, i, word.length));
