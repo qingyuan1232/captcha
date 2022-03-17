@@ -28,7 +28,7 @@ public class MultivariateOperationCaptchaStrategy implements ICaptchaStrategy {
         //生成指定个数的数字字符串并随机拼接运算符
         List<String> strs = Stream.iterate(BigInteger.ZERO, i -> i.add(BigInteger.ONE))
                 .limit(number)
-                .map(i -> String.valueOf(RANDOM.nextInt(10)) + EnumUtils.random(CalculateTypeEnum.class).getType())
+                .map(i -> RANDOM.nextInt(10) + EnumUtils.random(CalculateTypeEnum.class).getType())
                 .collect(Collectors.toList());
 
         //将数组进行拼接

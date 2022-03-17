@@ -74,7 +74,7 @@ public abstract class AbstractCaptchaService implements ICaptchaService {
             byte[] data = swapStream.toByteArray();
             result.setBase64(Base64.getEncoder().encodeToString(data));
         } catch (IOException e) {
-            log.error("generateCaptcha write error : {}", e);
+            log.error("generateCaptcha write error : ", e);
         }
     }
 

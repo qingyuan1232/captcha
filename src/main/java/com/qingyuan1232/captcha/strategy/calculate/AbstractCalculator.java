@@ -38,7 +38,7 @@ public abstract class AbstractCalculator implements ICalculator {
         //计算结果
         int result = calculate(numbers);
         //拼接显示字符串
-        String show = String.join(getCalculateType().getType(), Lists.transform(numbers, Functions.toStringFunction()));
+        String show = numbers.stream().map(Functions.toStringFunction()).collect(Collectors.joining(getCalculateType().getType()));
         show += "=";
 
         CaptchaBean captcha = new CaptchaBean();

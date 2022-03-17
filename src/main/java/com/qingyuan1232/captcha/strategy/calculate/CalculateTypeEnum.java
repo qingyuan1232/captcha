@@ -20,8 +20,8 @@ public enum CalculateTypeEnum {
      */
     REDUCE("-", ReduceCalculator.getInstance());
 
-    private String type;
-    private ICalculator calculator;
+    private final String type;
+    private final ICalculator calculator;
 
     CalculateTypeEnum(String type, ICalculator calculator) {
         this.type = type;

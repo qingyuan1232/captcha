@@ -20,7 +20,7 @@ public class PlusCalculator extends AbstractCalculator {
 
     @Override
     public int calculate(List<Integer> nums) {
-        return nums.stream().reduce((a, b) -> a + b).orElseThrow(RuntimeException::new);
+        return nums.stream().reduce(Integer::sum).orElseThrow(RuntimeException::new);
     }
 
     @Override

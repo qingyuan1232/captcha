@@ -7,7 +7,7 @@ import java.util.Random;
  * @date: 2019-01-14 16:59
  */
 public class EnumUtils {
-    private static Random rand = new Random();
+    private static final Random RAND = new Random();
 
     private EnumUtils() {
     }
@@ -17,6 +17,6 @@ public class EnumUtils {
     }
 
     public static <T> T random(T[] values) {
-        return values[rand.nextInt(values.length)];
+        return values[RAND.nextInt(values.length)];
     }
 }
